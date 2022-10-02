@@ -14,7 +14,7 @@ import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscelleneous/UpdateGroupChatModal";
 import { ChatState } from "../context/ChatProvider";
 import ScrollableChat from "./ScrollableChat";
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://jweb-mern-chat.herokuapp.com/";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
