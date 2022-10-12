@@ -4,9 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "cd backend && npm install  && cd ../frontend && npm install && npm run build",
     "start": "node backend/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon backend/server.js"
   },
   "author": "jweb boss",
   "license": "ISC",
@@ -21,13 +20,5 @@
     "nodemon": "^2.0.19",
     "socket.io": "^4.5.2",
     "socket.io-client": "^4.5.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ejioforJs/.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ejioforJs/Mern-chat-app/issues"
-  },
-  "homepage": "https://github.com/ejioforJs/Mern-chat-app#readme"
+  }
 }
