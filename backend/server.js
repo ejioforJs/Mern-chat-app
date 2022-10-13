@@ -29,18 +29,18 @@ app.get('/', (req, res) => {
   res.send('api is running');
 });
 
-app.get('/api/getList', (req,res) => {
-  var list = ["item1", "item2", "item3"];
-  res.json(list);
-  console.log('Sent list of items');
-});
+// app.get('/api/getList', (req,res) => {
+//   var list = ["item1", "item2", "item3"];
+//   res.json(list);
+//   console.log('Sent list of items');
+// });
 
 app.use('/api/user', userRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/message', messageRoutes);
 
 const __dirname1 = path.resolve()
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV) {
   app.use(express.static(path.join(__dirname1, "/frontend/build")));
 
   app.get("*", (req, res) =>
