@@ -1,7 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const { chats } = require('./data/data');
-// const connectdb = require("./config/db")
+const connectdb = require("./config/db")
 const userRoutes = require('./routes/userRoutes');
 const chatRoutes = require('./routes/chatRoutes');
 const messageRoutes = require('./routes/messageRoutes');
@@ -10,15 +10,16 @@ const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 const path = require("path")
 
 dotenv.config();
+connectdb()
 
-mongoose
-  .connect(process.env.MONGODB_URI)
-  .then(() => {
-    console.log('connected to db');
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
+// mongoose
+//   .connect(process.env.MONGODB_URI)
+//   .then(() => {
+//     console.log('connected to db');
+//   })
+//   .catch((err) => {
+//     console.log(err.message);
+//   });
 
 const app = express();
 

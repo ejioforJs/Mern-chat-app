@@ -43,7 +43,6 @@ const Signup = () => {
       });
       return;
     }
-    console.log(name, email, password, pic);
     try {
       const config = {
         headers: {
@@ -60,9 +59,8 @@ const Signup = () => {
         },
         config
       );
-      console.log(data);
       toast({
-        title: "Registration Successful",
+        title: "Registration Successful,if page is blank reload to see your chats, sorry for the inconvenience thank you.",
         status: "success",
         duration: 5000,
         isClosable: true,

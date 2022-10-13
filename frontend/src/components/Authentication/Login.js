@@ -47,7 +47,7 @@ const Login = () => {
 
       // console.log(JSON.stringify(data));
       toast({
-        title: "Login Successful",
+        title: "Login Successful,if page is blank reload to see your chats, sorry for the inconvenience thank you.",
         status: "success",
         duration: 5000,
         isClosable: true,
